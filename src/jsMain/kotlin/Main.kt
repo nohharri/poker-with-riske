@@ -10,14 +10,17 @@ fun main() {
 
     renderComposable(rootElementId = "root") {
         Div({ style { padding(25.px) } }) {
+
+            Banner()
+
             Button(attrs = {
                 onClick { count -= 1 }
             }) {
-                Text("-")
+                Text("WORKING")
             }
 
             Span({ style { padding(15.px) } }) {
-                Text("$count")
+                Text("$count potatos")
             }
 
             Button(attrs = {
