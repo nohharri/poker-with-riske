@@ -17,21 +17,6 @@ fun main() {
                 Header()
                 Banner()
 
-                Button(attrs = {
-                    onClick { count -= 1 }
-                }) {
-                    Text("poop")
-                }
-
-                Span({ style { padding(15.px) } }) {
-                    Text("$count potatos")
-                }
-
-                Button(attrs = {
-                    onClick { count += 1 }
-                }) {
-                    Text("+")
-                }
             }
         }
     //}

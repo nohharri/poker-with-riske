@@ -18,7 +18,7 @@ object WebStyleSheet : StyleSheet() {
         height(200.px)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)
-        alignItems(AlignItems.Baseline)
+        alignItems(AlignItems.Stretch)
         color(Color.white)
     }
 }
