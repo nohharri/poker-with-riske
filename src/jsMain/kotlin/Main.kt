@@ -1,4 +1,5 @@
 import Banner.Banner
+import Header.Header
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -8,28 +9,31 @@ import org.jetbrains.compose.web.renderComposable
 
 fun main() {
     var count: Int by mutableStateOf(0)
-
     renderComposable(rootElementId = "root") {
-        Div({ style { padding(25.px) } }) {
+        Style(WebStyleSheet)
+        //Main({style { backgroundColor(Color("blue")) }}) {
 
-            Banner()
+            Div({ style { padding(25.px);backgroundColor(Color("blue")) } }) {
+                Header()
+                Banner()
 
-            Button(attrs = {
-                onClick { count -= 1 }
-            }) {
-                Text("WORKING")
-            }
+                Button(attrs = {
+                    onClick { count -= 1 }
+                }) {
+                    Text("poop")
+                }
 
-            Span({ style { padding(15.px) } }) {
-                Text("$count potatos")
-            }
+                Span({ style { padding(15.px) } }) {
+                    Text("$count potatos")
+                }
 
-            Button(attrs = {
-                onClick { count += 1 }
-            }) {
-                Text("+")
+                Button(attrs = {
+                    onClick { count += 1 }
+                }) {
+                    Text("+")
+                }
             }
         }
-    }
+    //}
 }
 
