@@ -5,6 +5,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.*
 
 
 @Composable
@@ -18,25 +19,15 @@ fun Banner() {
                 style {
                     flexDirection(FlexDirection.Column)
                     display(DisplayStyle.Flex)
-                    flexWrap(FlexWrap.Wrap)
-                    alignItems(AlignItems.Stretch)
-
-
                 }
             }
-
-
         ) {
             //description
             Div(
-                attrs = {
+                attrs = { classes(WebStyleSheet.box)
                     style {
                         width(700.px)
                         height(290.px)
-                        background("rgba(28, 53, 95, 0.53)")
-                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                        borderRadius(20.px)
-                        property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25)")
                     }
                 }
             ){
@@ -63,30 +54,33 @@ fun Banner() {
             }) {
 
                 //apply
-                Div(attrs = {
-                    classes(WebStyleSheet.headersmol)
-                    style {
-                        textAlign("center")
-                        width(284.px)
-                        height(89.px)
-                        background("#F65665")
-                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                        borderRadius(20.px)
+                A("https://pokerwithriske.typeform.com/to/fVw6HVJc?typeform-source=www.pokerwithriske.com") {
+                    Div(attrs = {
+                        classes(WebStyleSheet.headersmol)
+                        classes(WebStyleSheet.verticalAlign)
+                        classes(WebStyleSheet.box)
+                        style {
+                            textAlign("center")
+                            width(284.px)
+                            height(89.px)
+                            background("#F65665")
+                        }
+                    }) {
+
+                        Text("Apply Now")
+
                     }
-                }) {
-                    Text("Apply Now")
                 }
                 //meet
                 Div(
                     attrs = {
                         classes(WebStyleSheet.headersmol)
+                        classes(WebStyleSheet.verticalAlign)
+                        classes(WebStyleSheet.box)
                         style {
                             textAlign("center")
                             width(391.px)
                             height(89.px)
-                            background("#1C355F")
-                            //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                            borderRadius(20.px)
 
                         }
                     }
@@ -99,8 +93,8 @@ fun Banner() {
         Div(
             attrs = {
                 style {
-                    width(654.px)
-                    height(807.px)
+                    width(807.px)
+                    //height(654.px)
                     textAlign("center")
                 }
             }

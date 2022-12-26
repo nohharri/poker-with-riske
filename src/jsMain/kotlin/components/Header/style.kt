@@ -10,17 +10,16 @@ import org.jetbrains.compose.web.css.AlignSelf
 object WebStyleSheet : StyleSheet() {
     val main by style {
         display(DisplayStyle.Flex)
-        flexDirection(FlexDirection.Row)
+        flexDirection(FlexDirection.Column)
         justifyContent(JustifyContent.Center)
-        background("linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%)")
-
+        background("linear-gradient(0deg, #070335 0%, #192F53 100%, #090534  100%)")
 
     }
     val page by style {
 
         width(1400.px)
     }
-    val box by style {
+    val header by style {
         height(200.px)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.SpaceBetween)
@@ -28,7 +27,7 @@ object WebStyleSheet : StyleSheet() {
         color(Color.white)
     }
     val banner by style {
-        height(500.px)
+        //height(500.px)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)
         alignItems(AlignItems.Stretch)
@@ -63,6 +62,28 @@ object WebStyleSheet : StyleSheet() {
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
     }
+
+    val verticalAlign by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        flexDirection(FlexDirection.Column)
+    }
+
+    val horizontalAlign by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        flexDirection(FlexDirection.Row)
+    }
+
+    val box by style {
+        background("rgba(28, 53, 95, 0.53)")
+        borderRadius(20.px)
+        property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25), inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+        //property("box-shadow", "inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+
+    }/* Rectangle 1 */
+
+
 
 }
 
