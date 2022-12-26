@@ -12,33 +12,25 @@ import org.jetbrains.compose.web.renderComposable
 
 @Composable
 fun Header() {
+    //var visible: Boolean = true;
         Div(
-            attrs = { classes(WebStyleSheet.box) }
+            attrs = { classes(WebStyleSheet.box) ; style{paddingTop(50.px)} }
         ) {
             //logo
-            Div(
-                attrs = {
-                    style {
-                        fontSize(64.px)
-                        fontWeight(700)
-                        property("font-family","Inter,Helvetica")
-                    }
-                }
-            ) {
+            Div(attrs = {classes(WebStyleSheet.logo)}) {
                 Text("PWR")
             }
             //login
             Div(
-                attrs = {
+                attrs = {classes(WebStyleSheet.headersmol)
                     style {
-                        fontSize(36.px)
-                        fontWeight(700)
-                        property("font-family","Poppins,Helvetica")
                         textDecoration("underline")
+                        //padding(20.px)
                     }
                 }
             ) {
-                Text("Login")
+                //Login()
+                /*visible &&*/ Text("Login")
             }
         }
 }

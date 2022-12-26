@@ -20,33 +20,34 @@ fun Banner() {
                     display(DisplayStyle.Flex)
                     flexWrap(FlexWrap.Wrap)
                     alignItems(AlignItems.Stretch)
-                    width(700.px)
+
+
                 }
             }
+
+
         ) {
             //description
             Div(
                 attrs = {
                     style {
+                        width(700.px)
+                        height(290.px)
+                        background("rgba(28, 53, 95, 0.53)")
+                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+                        borderRadius(20.px)
+                        property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25)")
                     }
                 }
             ){
                 Div(attrs = {
-                    style {
-                        fontSize(36.px)
-                        fontWeight(700)
-                        property("font-family","Poppins,Helvetica")
-                    }
+                    classes(WebStyleSheet.headersmol)
+                    style{padding(40.px)}
                 }){
+
                     Text("Simplify, don't sacrifice.")
                 }
-                Div(attrs = {
-                    style {
-                        fontSize(32.px)
-                        fontWeight(500)
-                        property("font-family", "Poppins,Helvetica")
-                    }
-                }){
+                Div(attrs = {classes(WebStyleSheet.description) ; style{padding(40.px)}}){
                     Text("We provide our students with simple strategies that don't sacrifice EV.")
                 }
             }
@@ -55,23 +56,42 @@ fun Banner() {
                 style {
                     flexDirection(FlexDirection.Row)
                     display(DisplayStyle.Flex)
+                    alignItems(AlignItems.Stretch)
+                    justifyContent(JustifyContent.SpaceBetween)
+                    paddingTop(20.px)
                 }
             }) {
 
                 //apply
-                Div(
-
-                ) {
+                Div(attrs = {
+                    classes(WebStyleSheet.headersmol)
+                    style {
+                        textAlign("center")
+                        width(284.px)
+                        height(89.px)
+                        background("#F65665")
+                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+                        borderRadius(20.px)
+                    }
+                }) {
                     Text("Apply Now")
                 }
                 //meet
                 Div(
                     attrs = {
+                        classes(WebStyleSheet.headersmol)
                         style {
+                            textAlign("center")
+                            width(391.px)
+                            height(89.px)
+                            background("#1C355F")
+                            //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+                            borderRadius(20.px)
+
                         }
                     }
                 ) {
-                    Text("Apply Now")
+                    Text("Meet our Coaches")
                 }
             }
         }
@@ -79,7 +99,9 @@ fun Banner() {
         Div(
             attrs = {
                 style {
-
+                    width(654.px)
+                    height(807.px)
+                    textAlign("center")
                 }
             }
         ) {
