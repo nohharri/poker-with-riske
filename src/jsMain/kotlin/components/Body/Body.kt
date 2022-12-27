@@ -31,11 +31,9 @@ fun Body() {
             }
             //sample coach
             Div(
-                attrs = {
+                attrs = { classes(WebStyleSheet.coachBoxes)
                     style {
-                        display(DisplayStyle.Flex)
-                        flexDirection(FlexDirection.Row)
-                        justifyContent(JustifyContent.SpaceBetween)
+
 
                     }
                 }
@@ -50,45 +48,30 @@ fun Body() {
             }
             //sample student
             Div(
-                attrs = { classes(WebStyleSheet.box)
-                    style {
-                        display(DisplayStyle.Flex)
-                        flexDirection(FlexDirection.Column)
-                        justifyContent(JustifyContent.SpaceEvenly)
-                        width(1236.px)
-                        height(424.px)
-                    }
-                }
+                attrs = { classes(WebStyleSheet.box) ; classes(WebStyleSheet.studentBox) }
             ) {
                 //name
                 Div(attrs = { classes(WebStyleSheet.headersmol); style { textAlign("center") } }) {
                     Text("Jake M")
                 }
-                Div(attrs = {
+                Div(attrs = { classes(WebStyleSheet.studentPicQuote)
                     style {
-                        display(DisplayStyle.Flex)
-                        flexDirection(FlexDirection.Row)
-                        justifyContent(JustifyContent.SpaceEvenly)
+
                     }
                 }) {
                     //profile pic
-                    Div(
-                        attrs={classes(WebStyleSheet.verticalAlign)
-
-                            style{
-                                height(200.px)
-                                width(200.px)
-                                background("red")
-                                property("border-radius", "50%")
-                                display(DisplayStyle.InlineBlock)
-                                padding(20.px)
+                    Div(attrs = {classes(WebStyleSheet.horizontalAlign)}) {
+                        Div(
+                            attrs = {
+                                classes(WebStyleSheet.verticalAlign)
+                                classes(WebStyleSheet.profilePicPlaceholder)
                             }
-                        }
-                    ) {
+                        ) {
 
+                        }
                     }
                     //description
-                    Div(attrs={classes(WebStyleSheet.description); classes(WebStyleSheet.verticalAlign) ; style{padding(20.px) ; width(800.px)}}) {
+                    Div(attrs={classes(WebStyleSheet.description); classes(WebStyleSheet.verticalAlign) ; style{padding(20.px)}}) {
                         Text("“What separates Poker With Riske from the other coaching I've received before is that the program is incredibly organized and breaks complex ideas into well-structured, implementable heuristics. The community is very active and supportive, and through the program I've become more passionate about poker than I ever was before.”")
                     }
 
@@ -101,51 +84,45 @@ fun Body() {
 
 @Composable
 fun coach(name: String){
-    Div(
-        attrs = { classes(WebStyleSheet.box)
-            style{
-                width(384.px)
-                height(555.px)
-                display(DisplayStyle.Flex)
-                flexDirection(FlexDirection.Column)
-                justifyContent(JustifyContent.SpaceEvenly)
-            }
-        }
-    ) {
-        //name
-        Div(attrs={
-            classes(WebStyleSheet.headersmol)
-            style{
-                textAlign("center")
-            }
-        }){
-            Text(name)
-        }
-        //profile pic
-        Div(attrs={style{textAlign("center")}}) {
-            Div(
-                attrs = {
-                    style {
-                        height(200.px)
-                        width(200.px)
-                        background("red")
-                        property("border-radius", "50%")
-                        display(DisplayStyle.InlineBlock)
-                        padding(20.px)
-
-                    }
+    Div(attrs = {classes(WebStyleSheet.horizontalAlign)}){
+        Div(
+            attrs = { classes(WebStyleSheet.box)
+                style{
+                    width(384.px)
+                    height(555.px)
+                    display(DisplayStyle.Flex)
+                    flexDirection(FlexDirection.Column)
+                    justifyContent(JustifyContent.SpaceEvenly)
+                    margin(20.px)
                 }
-            ){}
-        }
-        Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
-            Text("$1,000,000 in Profit")
-        }
-        Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
-            Text("Toronto Open Winner")
-        }
-        Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
-            Text("2022 Poker Awards")
-        }
+            }
+        ) {
+            //name
+            Div(attrs={
+                classes(WebStyleSheet.headersmol)
+                style{
+                    textAlign("center")
+                }
+            }){
+                Text(name)
+            }
+            //profile pic
+            Div(attrs={style{textAlign("center")}}) {
+                Div(
+                    attrs = {classes(WebStyleSheet.profilePicPlaceholder) }
+                ){}
+            }
+            Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
+                Text("$1,000,000 in Profit")
+            }
+            Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
+                Text("Toronto Open Winner")
+            }
+            Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
+                Text("2022 Poker Awards")
+            }
 
+        }
     }
+
 }
