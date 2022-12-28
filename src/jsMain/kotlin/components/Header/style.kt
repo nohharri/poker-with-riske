@@ -7,61 +7,230 @@ import org.jetbrains.compose.web.css.alignSelf
 import org.jetbrains.compose.web.css.AlignSelf
 
 // test
+
+
+
 object WebStyleSheet : StyleSheet() {
     val main by style {
         display(DisplayStyle.Flex)
-        flexDirection(FlexDirection.Row)
-        justifyContent(JustifyContent.Center)
-        background("linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%)")
+        flexDirection(FlexDirection.Column)
+        justifyContent(JustifyContent.FlexEnd)
+        background("linear-gradient(0deg, #070335 0%, #192F53 100%, #090534  100%)")
 
 
     }
     val page by style {
 
-        width(1400.px)
+        width(1000.px)
+        media("(max-width: 800px)") {
+            self style {
+                width(100.percent)
+            }
+        }
+
     }
-    val box by style {
+    val header by style {
         height(200.px)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.SpaceBetween)
         alignItems(AlignItems.Baseline)
         color(Color.white)
+        width(100.percent)
+        textAlign("center")
+
+        media("(max-width: 800px)") {
+            self style {
+                flexDirection(FlexDirection.Column)
+                alignItems(AlignItems.Center)
+            }
+        }
     }
     val banner by style {
-        height(500.px)
+        //height(500.px)
         display(DisplayStyle.Flex)
-        justifyContent(JustifyContent.Center)
-        alignItems(AlignItems.Stretch)
+        justifyContent(JustifyContent.SpaceEvenly)
         color(Color.white)
+        //marginBottom(80.px)
+        margin(20.px)
+        
     }
     val body by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Stretch)
         color(Color.white)
-        width(1236.px)
+        width(800.px)
+        media("(max-width: 800px)") {
+            self style {
+                width(100.percent)
+            }
+        }
     }
 
     //text stuff
     val logo by style {
-        fontSize(64.px)
+        fontSize(48.px)
         fontWeight(700)
         property("font-family","Inter,Helvetica")
+        margin(20.px)
+
     }
     val description by style {
-        fontSize(24.px)
+        fontSize(18.px)
         fontWeight(500)
         property("font-family","Poppins,Helvetica")
     }
     val headerbig by style {
-        fontSize(64.px)
+        fontSize(48.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
     }
     val headersmol by style {
-        fontSize(36.px)
+        fontSize(24.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
+    }
+
+    val verticalAlign by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        flexDirection(FlexDirection.Column)
+    }
+
+    val horizontalAlign by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        flexDirection(FlexDirection.Row)
+    }
+
+    val box by style {
+        background("rgba(28, 53, 95, 0.53)")
+        borderRadius(20.px)
+        property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25), inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
+        media("(max-width: 800px)") {
+            self style {
+            }
+        }
+
+
+    }/* Rectangle 1 */
+
+    val bannerBig by style {
+        width(440.px)
+        height(180.px)
+        flexDirection(FlexDirection.Column)
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.SpaceEvenly)
+        media("(max-width: 800px)") {
+            self style {
+                property("width","auto")
+                property("height","auto")
+            }
+        }
+
+    }
+    val bannerImg by style {
+        media("(max-width: 800px)") {
+            self style {
+                display(DisplayStyle.None)
+            }
+        }
+
+    }
+
+    val bannerSmall by style {
+        flexDirection(FlexDirection.Row)
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.SpaceBetween)
+        marginTop(20.px)
+        media("(max-width: 800px)") {
+            self style {
+                flexDirection(FlexDirection.Column)
+            }
+        }
+
+    }
+
+    val studentBox by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        justifyContent(JustifyContent.SpaceEvenly)
+        width(1236.px)
+        height(360.px)
+        margin(20.px)
+        media("(max-width: 800px)") {
+            self style {
+                property("width","auto")
+                property("height","auto")
+
+            }
+        }
+    }
+
+    val studentPicQuote by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        justifyContent(JustifyContent.SpaceEvenly)
+        media("(max-width: 800px)") {
+            self style {
+
+                flexDirection(FlexDirection.Column)
+
+            }
+        }
+    }
+
+    val profilePicPlaceholder by style {
+        height(200.px)
+        width(200.px)
+        background("red")
+        property("border-radius", "50%")
+        display(DisplayStyle.InlineBlock)
+        margin(20.px)
+    }
+
+    val coachBoxes by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        justifyContent(JustifyContent.SpaceEvenly)
+        width(100.percent)
+        media("(max-width: 800px)") {
+            self style {
+                flexDirection(FlexDirection.Column)
+                property("width", "auto")
+
+            }
+        }
+    }
+
+    val coachBox by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+
+        marginTop(20.px)
+        marginBottom(20.px)
+
+        media("(max-width: 800px)") {
+            self style {
+                width(300.px)
+
+            }
+        }
+    }
+    val applyBox by style {
+        textAlign("center")
+        background("#F65665")
+        padding(15.px,20.px,15.px,20.px)
+        marginBottom(20.px)
+    }
+
+
+    val hoverbox by style {
+        self + hover() style {
+            property("transition","0.5s")
+
+            property("filter","brightness(1.2)")
+        }
     }
 
 }

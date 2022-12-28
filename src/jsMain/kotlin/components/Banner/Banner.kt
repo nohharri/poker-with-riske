@@ -5,6 +5,8 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.css.media
 
 
 @Composable
@@ -18,92 +20,80 @@ fun Banner() {
                 style {
                     flexDirection(FlexDirection.Column)
                     display(DisplayStyle.Flex)
-                    flexWrap(FlexWrap.Wrap)
-                    alignItems(AlignItems.Stretch)
-
-
                 }
+                
             }
-
-
         ) {
             //description
             Div(
-                attrs = {
-                    style {
-                        width(700.px)
-                        height(290.px)
-                        background("rgba(28, 53, 95, 0.53)")
-                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                        borderRadius(20.px)
-                        property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25)")
-                    }
-                }
+
+                attrs = { classes(WebStyleSheet.bannerBig) ; classes(WebStyleSheet.box) }
             ){
                 Div(attrs = {
                     classes(WebStyleSheet.headersmol)
-                    style{padding(40.px)}
+                    style{
+                        padding(10.px,40.px,10.px,40.px)
+                    }
                 }){
 
                     Text("Simplify, don't sacrifice.")
                 }
-                Div(attrs = {classes(WebStyleSheet.description) ; style{padding(40.px)}}){
+                Div(attrs = {classes(WebStyleSheet.description)
+                    style{
+                        padding(10.px,40.px,10.px,40.px)
+                    }
+                }){
                     Text("We provide our students with simple strategies that don't sacrifice EV.")
                 }
             }
             //2 boxes below
-            Div(attrs = {
+            Div(attrs = { classes(WebStyleSheet.bannerSmall)
                 style {
-                    flexDirection(FlexDirection.Row)
-                    display(DisplayStyle.Flex)
-                    alignItems(AlignItems.Stretch)
-                    justifyContent(JustifyContent.SpaceBetween)
-                    paddingTop(20.px)
+
                 }
             }) {
 
                 //apply
-                Div(attrs = {
-                    classes(WebStyleSheet.headersmol)
-                    style {
-                        textAlign("center")
-                        width(284.px)
-                        height(89.px)
-                        background("#F65665")
-                        //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                        borderRadius(20.px)
+                A("https://pokerwithriske.typeform.com/to/fVw6HVJc?typeform-source=www.pokerwithriske.com") {
+                    Div(attrs = {
+                        classes(WebStyleSheet.headersmol)
+                        classes(WebStyleSheet.verticalAlign)
+                        classes(WebStyleSheet.box)
+                        classes(WebStyleSheet.applyBox)
+                        classes(WebStyleSheet.hoverbox)
+
+                    }) {
+
+                        Text("Apply Now")
+
                     }
-                }) {
-                    Text("Apply Now")
                 }
                 //meet
-                Div(
-                    attrs = {
-                        classes(WebStyleSheet.headersmol)
-                        style {
-                            textAlign("center")
-                            width(391.px)
-                            height(89.px)
-                            background("#1C355F")
-                            //boxShadow("0px 4px 23px 8px rgba(0, 0, 0, 0.25) inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-                            borderRadius(20.px)
+                A("#Coaches") {
 
+                    Div(
+                        attrs = {
+                            classes(WebStyleSheet.headersmol)
+                            classes(WebStyleSheet.verticalAlign)
+                            classes(WebStyleSheet.box)
+                            classes(WebStyleSheet.hoverbox)
+                            style {
+                                textAlign("center")
+                                padding(15.px, 20.px, 15.px, 20.px)
+                                marginBottom(20.px)
+
+                            }
                         }
+                    ) {
+                        Text("Meet our Coaches")
                     }
-                ) {
-                    Text("Meet our Coaches")
                 }
             }
         }
         //image
+
         Div(
-            attrs = {
-                style {
-                    width(654.px)
-                    height(807.px)
-                    textAlign("center")
-                }
-            }
+            attrs = {classes(WebStyleSheet.bannerImg)}
         ) {
             Img(src="https://www.pokerchips.com/media/wysiwyg/PokerChips/custom-poker-chips_3.png")
         }

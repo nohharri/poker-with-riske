@@ -12,17 +12,18 @@ import org.jetbrains.compose.web.renderComposable
 
 
 fun main() {
-    var count: Int by mutableStateOf(0)
     renderComposable(rootElementId = "root") {
         Style(WebStyleSheet)
         Div(attrs = { classes(WebStyleSheet.main) }) {
-            Div(attrs = { classes(WebStyleSheet.page) }) {
-                Header()
-                Banner()
-                Body()
+            Div(attrs = { classes(WebStyleSheet.horizontalAlign) }) {
+                Div(attrs = { classes(WebStyleSheet.page) }) {
+                    Header()
+                    Banner()
+                    Body()
 
+                }
             }
-        Footer()
+            Footer()
         }
     }
 }
