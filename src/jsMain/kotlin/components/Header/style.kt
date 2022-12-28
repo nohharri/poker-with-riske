@@ -9,18 +9,20 @@ import org.jetbrains.compose.web.css.AlignSelf
 // test
 
 
+
 object WebStyleSheet : StyleSheet() {
     val main by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
-        justifyContent(JustifyContent.Center)
+        justifyContent(JustifyContent.FlexEnd)
         background("linear-gradient(0deg, #070335 0%, #192F53 100%, #090534  100%)")
+
 
     }
     val page by style {
 
         width(1000.px)
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
                 width(100.percent)
             }
@@ -33,17 +35,23 @@ object WebStyleSheet : StyleSheet() {
         justifyContent(JustifyContent.SpaceBetween)
         alignItems(AlignItems.Baseline)
         color(Color.white)
-        media("(max-width: 640px)") {
-            self style {
+        width(100.percent)
+        textAlign("center")
 
+        media("(max-width: 800px)") {
+            self style {
+                flexDirection(FlexDirection.Column)
+                alignItems(AlignItems.Center)
             }
         }
     }
     val banner by style {
         //height(500.px)
         display(DisplayStyle.Flex)
-        justifyContent(JustifyContent.SpaceBetween)
+        justifyContent(JustifyContent.SpaceEvenly)
         color(Color.white)
+        //marginBottom(80.px)
+        margin(20.px)
         
     }
     val body by style {
@@ -51,8 +59,8 @@ object WebStyleSheet : StyleSheet() {
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Stretch)
         color(Color.white)
-        width(1236.px)
-        media("(max-width: 640px)") {
+        width(800.px)
+        media("(max-width: 800px)") {
             self style {
                 width(100.percent)
             }
@@ -61,22 +69,24 @@ object WebStyleSheet : StyleSheet() {
 
     //text stuff
     val logo by style {
-        fontSize(64.px)
+        fontSize(48.px)
         fontWeight(700)
         property("font-family","Inter,Helvetica")
+        margin(20.px)
+
     }
     val description by style {
-        fontSize(24.px)
+        fontSize(18.px)
         fontWeight(500)
         property("font-family","Poppins,Helvetica")
     }
     val headerbig by style {
-        fontSize(64.px)
+        fontSize(48.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
     }
     val headersmol by style {
-        fontSize(36.px)
+        fontSize(24.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
     }
@@ -97,7 +107,7 @@ object WebStyleSheet : StyleSheet() {
         background("rgba(28, 53, 95, 0.53)")
         borderRadius(20.px)
         property("box-shadow", "0px 4px 23px 8px rgba(0, 0, 0, 0.25), inset 0px 4px 1px rgba(255, 255, 255, 0.25)")
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
             }
         }
@@ -106,12 +116,12 @@ object WebStyleSheet : StyleSheet() {
     }/* Rectangle 1 */
 
     val bannerBig by style {
-        width(700.px)
-        height(290.px)
+        width(440.px)
+        height(180.px)
         flexDirection(FlexDirection.Column)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.SpaceEvenly)
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
                 property("width","auto")
                 property("height","auto")
@@ -120,7 +130,7 @@ object WebStyleSheet : StyleSheet() {
 
     }
     val bannerImg by style {
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
                 display(DisplayStyle.None)
             }
@@ -133,7 +143,7 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.SpaceBetween)
         marginTop(20.px)
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
                 flexDirection(FlexDirection.Column)
             }
@@ -146,8 +156,9 @@ object WebStyleSheet : StyleSheet() {
         flexDirection(FlexDirection.Column)
         justifyContent(JustifyContent.SpaceEvenly)
         width(1236.px)
-        height(424.px)
-        media("(max-width: 640px)") {
+        height(360.px)
+        margin(20.px)
+        media("(max-width: 800px)") {
             self style {
                 property("width","auto")
                 property("height","auto")
@@ -160,7 +171,7 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Row)
         justifyContent(JustifyContent.SpaceEvenly)
-        media("(max-width: 640px)") {
+        media("(max-width: 800px)") {
             self style {
 
                 flexDirection(FlexDirection.Column)
@@ -181,16 +192,46 @@ object WebStyleSheet : StyleSheet() {
     val coachBoxes by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Row)
-        justifyContent(JustifyContent.SpaceBetween)
-        media("(max-width: 640px)") {
+        justifyContent(JustifyContent.SpaceEvenly)
+        width(100.percent)
+        media("(max-width: 800px)") {
             self style {
                 flexDirection(FlexDirection.Column)
+                property("width", "auto")
 
             }
         }
     }
 
+    val coachBox by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
 
+        marginTop(20.px)
+        marginBottom(20.px)
+
+        media("(max-width: 800px)") {
+            self style {
+                width(300.px)
+
+            }
+        }
+    }
+    val applyBox by style {
+        textAlign("center")
+        background("#F65665")
+        padding(15.px,20.px,15.px,20.px)
+        marginBottom(20.px)
+    }
+
+
+    val hoverbox by style {
+        self + hover() style {
+            property("transition","0.5s")
+
+            property("filter","brightness(1.2)")
+        }
+    }
 
 }
 

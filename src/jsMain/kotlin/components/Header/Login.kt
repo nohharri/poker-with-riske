@@ -16,6 +16,8 @@ fun Login(){
             classes(WebStyleSheet.headersmol)
             style {
                 textDecoration("underline")
+                margin(20.px)
+
                 //padding(20.px)
             }
         }

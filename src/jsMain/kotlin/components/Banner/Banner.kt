@@ -32,7 +32,7 @@ fun Banner() {
                 Div(attrs = {
                     classes(WebStyleSheet.headersmol)
                     style{
-                        padding(20.px,40.px,20.px,40.px)
+                        padding(10.px,40.px,10.px,40.px)
                     }
                 }){
 
@@ -40,7 +40,7 @@ fun Banner() {
                 }
                 Div(attrs = {classes(WebStyleSheet.description)
                     style{
-                        padding(20.px,40.px,20.px,40.px)
+                        padding(10.px,40.px,10.px,40.px)
                     }
                 }){
                     Text("We provide our students with simple strategies that don't sacrifice EV.")
@@ -59,13 +59,9 @@ fun Banner() {
                         classes(WebStyleSheet.headersmol)
                         classes(WebStyleSheet.verticalAlign)
                         classes(WebStyleSheet.box)
-                        //classes(WebStyleSheet.smallBox)
-                        style {
-                            textAlign("center")
-                            background("#F65665")
-                            padding(20.px,40.px,20.px,40.px)
-                            marginBottom(20.px)
-                        }
+                        classes(WebStyleSheet.applyBox)
+                        classes(WebStyleSheet.hoverbox)
+
                     }) {
 
                         Text("Apply Now")
@@ -73,24 +69,29 @@ fun Banner() {
                     }
                 }
                 //meet
-                Div(
-                    attrs = {
-                        classes(WebStyleSheet.headersmol)
-                        classes(WebStyleSheet.verticalAlign)
-                        classes(WebStyleSheet.box)
-                        style {
-                            textAlign("center")
-                            padding(20.px,40.px,20.px,40.px)
-                            marginBottom(20.px)
+                A("#Coaches") {
 
+                    Div(
+                        attrs = {
+                            classes(WebStyleSheet.headersmol)
+                            classes(WebStyleSheet.verticalAlign)
+                            classes(WebStyleSheet.box)
+                            classes(WebStyleSheet.hoverbox)
+                            style {
+                                textAlign("center")
+                                padding(15.px, 20.px, 15.px, 20.px)
+                                marginBottom(20.px)
+
+                            }
                         }
+                    ) {
+                        Text("Meet our Coaches")
                     }
-                ) {
-                    Text("Meet our Coaches")
                 }
             }
         }
         //image
+
         Div(
             attrs = {classes(WebStyleSheet.bannerImg)}
         ) {
