@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face{
+    font-family: Poppins;
+    src: url(Poppins.ttf)
+}
+
+@font-face{
+    font-family: Inter;
+    src: url(Inter.ttf)
+}
