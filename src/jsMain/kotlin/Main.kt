@@ -2,6 +2,8 @@ import Banner.Banner
 import Header.Header
 import Body.Body
 import Footer.Footer
+import Selection.Selection
+import Elevate.Elevate
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -15,14 +17,15 @@ fun main() {
     renderComposable(rootElementId = "root") {
         Style(WebStyleSheet)
         Div(attrs = { classes(WebStyleSheet.main) }) {
-            Div(attrs = { classes(WebStyleSheet.horizontalAlign) }) {
                 Div(attrs = { classes(WebStyleSheet.page) }) {
                     Header()
                     Banner()
                     Body()
+                    Selection()
+                    Elevate()
 
                 }
-            }
+
             Footer()
         }
     }

@@ -14,13 +14,16 @@ object WebStyleSheet : StyleSheet() {
     val main by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
-        justifyContent(JustifyContent.FlexEnd)
+        alignItems(AlignItems.Center)
         background("linear-gradient(0deg, #070335 0%, #192F53 100%, #090534  100%)")
+
 
 
     }
     val page by style {
-
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignItems(AlignItems.Center)
         width(1000.px)
         media("(max-width: 800px)") {
             self style {
@@ -57,7 +60,8 @@ object WebStyleSheet : StyleSheet() {
     val body by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
-        alignItems(AlignItems.Stretch)
+        alignItems(AlignItems.Center)
+        alignSelf(AlignSelf.Center)
         color(Color.white)
         width(800.px)
         media("(max-width: 800px)") {
@@ -95,12 +99,6 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.Center)
         flexDirection(FlexDirection.Column)
-    }
-
-    val horizontalAlign by style {
-        display(DisplayStyle.Flex)
-        justifyContent(JustifyContent.Center)
-        flexDirection(FlexDirection.Row)
     }
 
     val box by style {
@@ -155,8 +153,9 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         justifyContent(JustifyContent.SpaceEvenly)
-        width(1236.px)
-        height(360.px)
+
+        width(760.px)
+        property("height","auto")
         margin(20.px)
         media("(max-width: 800px)") {
             self style {
@@ -171,6 +170,7 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Row)
         justifyContent(JustifyContent.SpaceEvenly)
+        alignItems(AlignItems.Center)
         media("(max-width: 800px)") {
             self style {
 
@@ -187,6 +187,7 @@ object WebStyleSheet : StyleSheet() {
         property("border-radius", "50%")
         display(DisplayStyle.InlineBlock)
         margin(20.px)
+        alignSelf(AlignSelf.Center)
     }
 
     val coachBoxes by style {
@@ -232,6 +233,70 @@ object WebStyleSheet : StyleSheet() {
             property("filter","brightness(1.2)")
         }
     }
+
+    val selectionProcess by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignItems(AlignItems.Center)
+        alignSelf(AlignSelf.Center)
+        color(Color.white)
+
+        media("(max-width: 800px)") {
+            self style {
+                width(100.percent)
+            }
+        }
+    }
+
+    val steps by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignItems(AlignItems.Center)
+
+
+
+    }
+
+    val smallCircle by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        alignItems(AlignItems.Center)
+        height(36.px)
+        width(36.px)
+        background("white")
+        property("color","rgba(28, 53, 95)")
+        property("border-radius", "50%")
+    }
+
+    val arrow by style {
+        fontSize(24.px)
+    }
+    val stepIcon by style {
+        fontSize(48.px)
+    }
+
+    val selectionStep by style {
+        display(DisplayStyle.Flex)
+        justifyContent(JustifyContent.Center)
+        alignItems(AlignItems.Center)
+        margin(20.px)
+        width(760.px)
+        media("(max-width: 800px)") {
+            self style {
+                property("width","auto")
+                flexDirection(FlexDirection.Column)
+            }
+        }
+    }
+
+    val Elevate by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignItems(AlignItems.Center)
+        alignSelf(AlignSelf.Center)
+        color(Color.white)
+    }
+
 
 }
 

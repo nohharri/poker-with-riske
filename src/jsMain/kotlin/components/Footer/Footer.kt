@@ -14,10 +14,10 @@ import org.jetbrains.compose.web.renderComposable
 fun Footer() {
     Div(attrs={
         style{
-            height(279.px)
+            height(200.px)
             width(100.percent)
             background("#090F26")
-            marginTop(200.px)
+            marginTop(20.px)
             display(DisplayStyle.Flex)
             justifyContent(JustifyContent.Center)
             flexDirection(FlexDirection.Column)
@@ -36,7 +36,7 @@ fun Footer() {
                     "#797979"
                 ); textAlign("center")
                 textDecoration("underline")
-                fontSize(20.px)
+                fontSize(8.px)
             }
             }) {
                 Text("Terms and Conditions | Privacy Policy | © Poker with Riske. Copyright 2022. All rights reserved.")
