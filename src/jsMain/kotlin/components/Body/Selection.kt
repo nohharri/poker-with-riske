@@ -12,7 +12,7 @@ import org.jetbrains.compose.web.renderComposable
 @Composable
 fun Selection() {
     Div(attrs={classes(WebStyleSheet.selectionProcess)}){
-        Div(attrs={classes(WebStyleSheet.headerbig);classes(WebStyleSheet.verticalAlign) ; style{height(200.px) }}){
+        Div(attrs={classes(WebStyleSheet.headerbig);classes(WebStyleSheet.verticalAlign) ;classes(WebStyleSheet.mobileHeader); style{height(200.px) }}){
             Text("Selection Process")
         }
         Div(

@@ -31,9 +31,11 @@ fun Banner() {
             ){
                 Div(attrs = {
                     classes(WebStyleSheet.headersmol)
+                    classes(WebStyleSheet.mobileHeader)
                     style{
                         padding(10.px,40.px,10.px,40.px)
                     }
+
                 }){
 
                     Text("Simplify, don't sacrifice.")

@@ -24,7 +24,7 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Center)
-        width(1000.px)
+        width(800.px)
         media("(max-width: 800px)") {
             self style {
                 width(100.percent)
@@ -295,6 +295,14 @@ object WebStyleSheet : StyleSheet() {
         alignItems(AlignItems.Center)
         alignSelf(AlignSelf.Center)
         color(Color.white)
+    }
+
+    val mobileHeader by style {
+        media("(max-width: 800px)") {
+            self style {
+                textAlign("center")
+            }
+        }
     }
 
 
