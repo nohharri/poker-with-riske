@@ -1,13 +1,12 @@
 package Banner
 
+import Constants
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
-import org.jetbrains.compose.web.css.media
-
 
 @Composable
 fun Banner() {
@@ -43,7 +42,7 @@ fun Banner() {
                         padding(10.px,40.px,10.px,40.px)
                     }
                 }){
-                    Text("We provide our students with simple strategies that don't sacrifice EV.")
+                    Text(Constants.BANNER_SUBTEXT)
                 }
             }
             //2 boxes below
