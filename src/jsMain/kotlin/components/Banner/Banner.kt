@@ -33,7 +33,7 @@ fun Banner() {
                     classes(WebStyleSheet.headersmol)
                     classes(WebStyleSheet.mobileHeader)
                     style{
-                        padding(10.px,40.px,10.px,40.px)
+                        padding(20.px,40.px,10.px,40.px)
                     }
 
                 }){
@@ -42,10 +42,22 @@ fun Banner() {
                 }
                 Div(attrs = {classes(WebStyleSheet.description)
                     style{
-                        padding(10.px,40.px,10.px,40.px)
+                        padding(10.px,40.px,20.px,40.px)
                     }
                 }){
-                    Text("We provide our students with simple strategies that don't sacrifice EV.")
+                    Text("We are a Coaching for Profits program that specializes in 6-max cash games." +
+                            " In our experience the CFP model is the best coaching model as the student’s " +
+                            "and coaches goals are completely aligned. ")
+
+                }
+                Div(attrs = {classes(WebStyleSheet.description)
+                    style{
+                        padding(10.px,40.px,20.px,40.px)
+                    }
+                }) {
+                    Text("Our goal is to equip our students with the necessary skills required to move " +
+                            "up to the highest stakes. To achieve this we teach a theoretically sound approach " +
+                            "that uses efficient simplifications to achieve an implementable winning strategy.")
                 }
             }
             //2 boxes below
@@ -71,34 +83,26 @@ fun Banner() {
                     }
                 }
                 //meet
-                A("#Coaches") {
+                A("#Offer") {
 
                     Div(
                         attrs = {
                             classes(WebStyleSheet.headersmol)
                             classes(WebStyleSheet.verticalAlign)
                             classes(WebStyleSheet.box)
+                            classes(WebStyleSheet.offerBox)
                             classes(WebStyleSheet.hoverbox)
-                            style {
-                                textAlign("center")
-                                padding(15.px, 20.px, 15.px, 20.px)
-                                marginBottom(20.px)
-
-                            }
                         }
                     ) {
-                        Text("Meet our Coaches")
+                        Text("What We Offer")
                     }
                 }
             }
         }
         //image
+            Img(src="pokerchips.png",
+                attrs = {classes(WebStyleSheet.bannerImg)})
 
-        Div(
-            attrs = {classes(WebStyleSheet.bannerImg)}
-        ) {
-            Img(src="https://www.pokerchips.com/media/wysiwyg/PokerChips/custom-poker-chips_3.png")
-        }
     }
 }
 

@@ -33,9 +33,9 @@ fun Body() {
                         classes(WebStyleSheet.coachBoxes)
                     }
                 ) {
-                    coach("Ryan Riske")
-                    coach("Andrew Ivers")
-                    coach("Connor Armstrong")
+                    coach("Ryan Riske","ryanriske.png", "2020", "7", "1000")
+                    coach("Andrew Ivers","andrew.jpg","2022", "6", "1000")
+                    coach("Connor Armstrong","connorarmstrong.png","2020", "7", "1000")
                 }
             //header 2
             Div(attrs = {
@@ -60,7 +60,7 @@ fun Body() {
 }
 
 @Composable
-fun coach(name: String){
+fun coach(name: String, profilePicPath: String, year: String, winrate: String, stake: String){
         Div(
             attrs = { classes(WebStyleSheet.box) ; classes(WebStyleSheet.coachBox)
 
@@ -78,28 +78,23 @@ fun coach(name: String){
             }
             //profile pic
             Div(attrs={style{textAlign("center")}}) {
-                Div(
-                    attrs = {classes(WebStyleSheet.profilePicPlaceholder) }
-                ){}
+                Img(
+                    src = profilePicPath,
+                    attrs = {classes(WebStyleSheet.profilePic)})
+
             }
-            Div(attrs={classes(WebStyleSheet.description) ; style{margin(10.px , 10.px , 0.px, 10.px) ; display(DisplayStyle.Flex)}}){
-                Div(attrs={style{marginRight(10.px)}}){
-                    I(attrs={classes("fa-solid") ; classes("fa-money-bill")})
-                }
-                Text("$1,000,000 in Profit")
+            Div(attrs={classes(WebStyleSheet.description) ; style{textAlign("center")}}){
+                Text("Results since "+ year + ":")
             }
-            Div(attrs={classes(WebStyleSheet.description) ; style{margin(10.px , 10.px , 0.px, 10.px) ; display(DisplayStyle.Flex)}}){
-                Div(attrs={style{marginRight(10.px)}}){
-                    I(attrs={classes("fa-solid") ; classes("fa-trophy")})
-                }
-                Text("Toronto Open Winner")
+            Div(attrs={classes(WebStyleSheet.description) ; style{marginLeft(30.px)}}){
+                I(attrs={classes("fa-solid") ; classes("fa-trophy") ; style{marginRight(10.px)}})
+                Text("~" + winrate + "bb winrate")
             }
-            Div(attrs={classes(WebStyleSheet.description) ;style{ margin(10.px , 10.px , 20.px, 10.px) ; display(DisplayStyle.Flex)}}){
-                Div(attrs={style{marginRight(10.px)}}){
-                    I(attrs={classes("fa-solid") ; classes("fa-award")})
-                }
-                Text("2022 Poker Awards")
+            Div(attrs={classes(WebStyleSheet.description) ; style{marginLeft(32.px) ; marginBottom(20.px)}}){
+                I(attrs={classes("fa-solid") ; classes("fa-award") ;style{marginRight(10.px)}})
+                Text("Avg. Stake " + stake + "NL")
             }
+
 
         }
 
@@ -119,7 +114,7 @@ fun student(name: String, quote: String) {
                 Div(
                     attrs = {
                         classes(WebStyleSheet.verticalAlign)
-                        classes(WebStyleSheet.profilePicPlaceholder)
+                        classes(WebStyleSheet.profilePic)
                     }
                 ) {}
             }
@@ -136,6 +131,25 @@ fun student(name: String, quote: String) {
         }
     }
 
-
+/*
+Div(attrs={classes(WebStyleSheet.description) ; style{margin(10.px , 10.px , 0.px, 10.px) ; display(DisplayStyle.Flex)}}){
+                Div(attrs={style{marginRight(10.px)}}){
+                    I(attrs={classes("fa-solid") ; classes("fa-money-bill")})
+                }
+                Text("$1,000,000 in Profit")
+            }
+            Div(attrs={classes(WebStyleSheet.description) ; style{margin(10.px , 10.px , 0.px, 10.px) ; display(DisplayStyle.Flex)}}){
+                Div(attrs={style{marginRight(10.px)}}){
+                    I(attrs={classes("fa-solid") ; classes("fa-trophy")})
+                }
+                Text("Toronto Open Winner")
+            }
+            Div(attrs={classes(WebStyleSheet.description) ;style{ margin(10.px , 10.px , 20.px, 10.px) ; display(DisplayStyle.Flex)}}){
+                Div(attrs={style{marginRight(10.px)}}){
+                    I(attrs={classes("fa-solid") ; classes("fa-award")})
+                }
+                Text("2022 Poker Awards")
+            }
+ */
 
 }
