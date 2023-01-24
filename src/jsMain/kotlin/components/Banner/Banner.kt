@@ -1,13 +1,12 @@
 package Banner
 
+import Constants
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
-import org.jetbrains.compose.web.css.media
-
 
 @Composable
 fun Banner() {
