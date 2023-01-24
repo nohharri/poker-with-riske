@@ -12,7 +12,7 @@ import org.jetbrains.compose.web.renderComposable
 @Composable
 fun Elevate() {
     Div(attrs = { classes(WebStyleSheet.Elevate) }) {
-        Div(attrs = { classes(WebStyleSheet.headerbig);classes(WebStyleSheet.verticalAlign); style { height(200.px) } }) {
+        Div(attrs = { classes(WebStyleSheet.headerbig);classes(WebStyleSheet.verticalAlign);classes(WebStyleSheet.mobileHeader); style { height(200.px) } }) {
             Text("Elevate Your Game")
         }
         A("https://pokerwithriske.typeform.com/to/fVw6HVJc?typeform-source=www.pokerwithriske.com") {

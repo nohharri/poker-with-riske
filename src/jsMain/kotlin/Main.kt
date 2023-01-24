@@ -1,6 +1,7 @@
 import Banner.Banner
 import Header.Header
 import Body.Body
+import Offer.Offer
 import Footer.Footer
 import Selection.Selection
 import Elevate.Elevate
@@ -20,6 +21,7 @@ fun main() {
                     Header()
                     Banner()
                     Body()
+                    Offer()
                     Selection()
                     Elevate()
                 }

@@ -24,7 +24,7 @@ object WebStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Center)
-        width(1000.px)
+        width(800.px)
         media("(max-width: 800px)") {
             self style {
                 width(100.percent)
@@ -77,22 +77,30 @@ object WebStyleSheet : StyleSheet() {
         fontWeight(700)
         property("font-family","Inter,Helvetica")
         margin(20.px)
+        color(Color.white)
+
 
     }
     val description by style {
         fontSize(18.px)
         fontWeight(500)
         property("font-family","Poppins,Helvetica")
+        color(Color.white)
+
     }
     val headerbig by style {
         fontSize(48.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
+        color(Color.white)
+
     }
     val headersmol by style {
         fontSize(24.px)
         fontWeight(700)
         property("font-family","Poppins,Helvetica")
+        color(Color.white)
+
     }
 
     val verticalAlign by style {
@@ -114,8 +122,8 @@ object WebStyleSheet : StyleSheet() {
     }/* Rectangle 1 */
 
     val bannerBig by style {
-        width(440.px)
-        height(180.px)
+        width(500.px)
+        property("height","auto")
         flexDirection(FlexDirection.Column)
         display(DisplayStyle.Flex)
         justifyContent(JustifyContent.SpaceEvenly)
@@ -128,6 +136,8 @@ object WebStyleSheet : StyleSheet() {
 
     }
     val bannerImg by style {
+        width(300.px)
+        property("height","100%")
         media("(max-width: 800px)") {
             self style {
                 display(DisplayStyle.None)
@@ -180,10 +190,9 @@ object WebStyleSheet : StyleSheet() {
         }
     }
 
-    val profilePicPlaceholder by style {
+    val profilePic by style {
         height(200.px)
         width(200.px)
-        background("red")
         property("border-radius", "50%")
         display(DisplayStyle.InlineBlock)
         margin(20.px)
@@ -221,8 +230,26 @@ object WebStyleSheet : StyleSheet() {
     val applyBox by style {
         textAlign("center")
         background("#F65665")
-        padding(15.px,20.px,15.px,20.px)
         marginBottom(20.px)
+        property("width", "240px")
+        height(65.px)
+        media("(max-width: 800px)") {
+            self style {
+                property("width", "auto")
+            }
+        }
+
+    }
+    val offerBox by style {
+        textAlign("center")
+        marginBottom(20.px)
+        property("width", "240px")
+        height(65.px)
+        media("(max-width: 800px)") {
+            self style {
+                property("width", "auto")
+            }
+        }
     }
 
 
@@ -239,7 +266,7 @@ object WebStyleSheet : StyleSheet() {
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Center)
         alignSelf(AlignSelf.Center)
-        color(Color.white)
+
 
         media("(max-width: 800px)") {
             self style {
@@ -273,6 +300,8 @@ object WebStyleSheet : StyleSheet() {
     }
     val stepIcon by style {
         fontSize(48.px)
+        color(Color.white)
+
     }
 
     val selectionStep by style {
@@ -295,6 +324,60 @@ object WebStyleSheet : StyleSheet() {
         alignItems(AlignItems.Center)
         alignSelf(AlignSelf.Center)
         color(Color.white)
+    }
+
+    val mobileHeader by style {
+        media("(max-width: 800px)") {
+            self style {
+                textAlign("center")
+            }
+        }
+    }
+
+    val offerSegment by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignItems(AlignItems.Center)
+    }
+
+    val offerList by style {
+        display(DisplayStyle.Flex)
+        flexWrap(FlexWrap.Wrap)
+        justifyContent(JustifyContent.SpaceEvenly)
+        margin(20.px)
+        width(760.px)
+        media("(max-width: 800px)") {
+            self style {
+                property("width","auto")
+            }
+        }
+    }
+
+    val offerPortion by style {
+        width(165.px)
+        height(300.px)
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        alignContent(AlignContent.Center)
+
+
+        textAlign("center")
+
+
+    }
+
+    val offerIcon by style {
+        display(DisplayStyle.Flex)
+        height(64.px)
+        justifyContent(JustifyContent.Center)
+        alignItems(AlignItems.Center)
+        margin(20.px)
+    }
+    val offerDescription by style {
+        flexDirection(FlexDirection.Column)
+        height(120.px)
+        marginLeft(10.px)
+        marginRight(10.px)
     }
 
 
