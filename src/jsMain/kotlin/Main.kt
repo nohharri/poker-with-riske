@@ -13,7 +13,6 @@ import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 
 
-
 fun main() {
     renderComposable(rootElementId = "root") {
         Style(WebStyleSheet)
@@ -25,7 +24,6 @@ fun main() {
                     Offer()
                     Selection()
                     Elevate()
-
                 }
 
             Footer()
