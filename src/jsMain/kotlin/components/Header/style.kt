@@ -354,8 +354,8 @@ object WebStyleSheet : StyleSheet() {
     }
 
     val offerPortion by style {
-        width(180.px)
-        height(264.px)
+        width(165.px)
+        height(300.px)
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         alignContent(AlignContent.Center)
